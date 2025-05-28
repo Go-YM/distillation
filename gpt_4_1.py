@@ -45,19 +45,19 @@ def encode_image(image_path):
 
 
 example_paths = [
-    r"C:\Users\UCIL\Desktop\ChartQA-main\ChartQA-main\ChartQA Dataset\train\png\two_col_103562.png",
-    r"C:\Users\UCIL\Desktop\ChartQA-main\ChartQA-main\ChartQA Dataset\train\png\two_col_2954.png",
-    r"C:\Users\UCIL\Desktop\ChartQA-main\ChartQA-main\ChartQA Dataset\train\png\two_col_61737.png",
-    r"C:\Users\UCIL\Desktop\ChartQA-main\ChartQA-main\ChartQA Dataset\train\png\multi_col_40810.png",
-    r"C:\Users\UCIL\Desktop\ChartQA-main\ChartQA-main\ChartQA Dataset\train\png\two_col_62773.png",
+    r"Enter the img1_paths",
+    r"Enter the img2_paths",
+    r"Enter the img3_paths",
+    r"Enter the img4_paths",
+    r"Enter the img5_paths",
 ]
 
 example_queries = [
-    "As of 2021, how many championship titles had Ferrari won?",
-    "What game topped the charts with 512.3 million hours watched on Twitch in the first half of 2019?",
-    "Which country was the leading pharmaceutical supplier to Germany in 2019?",
-    "What is the region with the highest number of ICUs in Italy?",
-    "What was the global sales income of certified Fairtrade International coffee in 2018?"
+    "Enter the guery1",
+    "Enter the guery2",
+    "Enter the guery3",
+    "Enter the guery4",
+    "Enter the guery5",
 ]
 
 example_images = []
@@ -111,7 +111,7 @@ It is an example of OCR Result and QA Result output. Based on the Image and Quer
   QA Result : [example  QA Result 5]
 """
 
-dataset_root   = r"C:\Users\UCIL\Desktop\ChartQA-main\ChartQA-main\ChartQA Dataset"
+dataset_root   = r"Enter the root dataset path"
 json_train     = os.path.join(dataset_root, "train", "train_human.json")
 json_val       = os.path.join(dataset_root, "val",   "val_human.json")
 json_test      = os.path.join(dataset_root, "test",  "test_human.json")
@@ -177,6 +177,5 @@ QA Result:
     })
 
 results_df = pd.DataFrame(predictions)
-output_path = "gpt_4_1_pred.csv"
-results_df.to_csv(output_path, index=False, encoding="utf-8-sig")
-print(f"✅ Saved predictions to {output_path}")    
+output_path = "Enter the output_path"
+results_df.to_csv(output_path, index=False, encoding="utf-8-sig")    
